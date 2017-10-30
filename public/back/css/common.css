@@ -4,3 +4,97 @@
 .mt_150  h4{
   text-align: center;
 }
+html,body{
+  height:100%;
+}
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.lt_aside{
+  width: 180px;
+  height:100%;
+  background-color: #222d32;
+  position: fixed;
+  left: 0;
+  transition: all 1s;
+}
+.tit{
+  height: 50px;
+  text-align: center;
+  background-color: #337ab7;
+  margin-bottom: 30px;
+}
+.tit h4{
+  line-height: 50px;
+  margin-top: auto;
+  color: #fff;
+}
+.pic img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.pic p{
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+}
+.manage a{
+  color: #aaa;
+  line-height: 50px;
+  display: block;
+  padding-left: 30px;
+  width:100%;
+}
+.manage a span{
+  margin-right: 10px;
+}
+.lt_aside .manage .man_one,.lt_aside .manage .man_two{
+  margin-left: 20px;
+  display: none ;
+}
+
+.new{
+  background-color: #1d1f21;
+  border-left: 3px solid #367fa9;
+}
+.getWhite{
+  color: #fff;
+}
+.lt_right{
+  margin-left: 180px;
+  transition: all 1s;
+}
+/*头部*/
+.header{
+  height: 50px;
+  background-color: #3c8dbc;
+}
+.header a{
+  color: #fff;
+  font-size: 16px;
+  line-height: 50px;
+  margin-left: 20px;
+}
+.header a:nth-child(2){
+  float: right;
+  margin-right: 20px;
+}
+.ml-180{
+  margin-left: -180px;
+  transition: all 1s;
+}
+.ml0{
+  margin-left: 0;
+  transition: all 1s;
+}
+/*主体部分*/
+.body{
+  margin-top: 20px;
+}
