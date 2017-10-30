@@ -28,8 +28,8 @@ $(document).ajaxStop(function () {
 
 //点击分类管理显示二级分类
 $(".shtwo").on("click",function () {
-  // $(this).siblings().css({style:"block"});
-  $(this).siblings().toggle();
+  // $(this).siblings().css({style:"display;'block'"});
+  $(this).siblings().slideToggle();
   // $(this).siblings().css({"width":"500px"});
 });
 

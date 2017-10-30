@@ -98,3 +98,10 @@ ul{
 .body{
   margin-top: 20px;
 }
+
+.user_content{
+      margin:0 10px;
+}
+#pagintor{
+  float: right;
+}

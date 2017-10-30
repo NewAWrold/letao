@@ -44,7 +44,7 @@ option2 = {
   },
   series : [
     {
-      name: '比例',
+      name: '比重',
       type: 'pie',
       radius : '55%',
       center: ['50%', '60%'],

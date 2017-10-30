@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>乐淘管理系统-首页</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="lt_aside">
+  <div class="tit"><a href="index1.html"><h4>一花一世界</h4></a></div>
+  <div class="pic">
+    <a href="javascript:;"><img src="images/default.png" alt=""></a>
+    <p>超级管理员</p>
+  </div>
+  <div class="manage">
+    <ul>
+      <li class="new"><a href="javascript:;"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+      <li>
+        <a class="shtwo" href="javascript:;"><span class="glyphicon glyphicon-list"></span>分类管理</a>
+        <a class="man_one  " href="first.html"><span>一级分类</span></a>
+        <a class="man_two " href="second.html"><span>二级分类</span></a>
+      </li>
+      <li><a href="product.html"><span class="glyphicon glyphicon-tags"></span>商品管理</a></li>
+    </ul>
+  </div>
+</div>
+<!--头部-->
+<div class="lt_right">
+  <header class="header">
+    <a href="javascript:;"><span class="glyphicon glyphicon-align-justify"></span></a>
+    <a href="javascript:;"><span class="glyphicon glyphicon-log-out"></span></a>
+  </header>
+
+  <!--主体部分-->
+  <div class="body">
+    <ol class="breadcrumb">
+      <li><a href="#">系统管理</a></li>
+      <li class="active">用户管理</li>
+    </ol>
+
+    <!--用户列表内容-->
+    <div class="user_content">
+     <table class="table table-bordered table-hover">
+        <thead>
+          <tr align="center">
+            <td width="10%">序号</td>
+            <td width="30%">用户名</td>
+            <td width="30%">手机号</td>
+            <td width="20%">状态</td>
+            <td width="10%">操作</td>
+          </tr>
+        </thead>
+        <tbody>
+        <!--我在这里挖个坑-->
+        </tbody>
+      </table>
+      <ul id="pagintor"></ul>
+    </div>
+  </div>
+</div>
+
+<!--模态框-->
+<div class="modal fade" tabindex="-1" id="logoutModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span> 您确定要退出后台管理系统吗？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn_logout btn btn-primary">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text//html" id="ple">
+{{each rows v i}}
+  <tr align="center">
+  <td>{{v.id}}</td>
+  <td>{{v.username}}</td>
+  <td>{{v.mobile}}</td>
+  <td>{{v.isDelete===1? "正常":"禁用"}}</td>
+  {{if v.isDelete == 1}}
+  <td class="btn btn-sm btn-danger">禁用</td>
+  {{/if}}
+  {{if v.isDelete == 0}}
+  <td class="btn btn-sm btn-success">启用</td>
+  {{/if}}
+  </tr>
+  {{/each}}
+</script>
+
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/user.js"></script>
+</html>
