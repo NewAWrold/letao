@@ -30,4 +30,31 @@ $(function () {
   })
   }
   render();
+
+//因为数据是通过模板引擎动态渲染出来的，我们给他设置点击事件的是够必须使用事件委托
+  $('tbody').on('click','.btn',function () {
+    // console.log(111);
+    $("#updateModal").modal("show");
+    var id = $(this).parent().data("id");
+    var isDelete = $(this).parent().data("isDelete");
+    isDelete = isDelete==1? 0:1;
+    // console.log(isDelete);
+    // console.log($(this).parent());
+    //因为模态框中的btn类都是一样的，所以我们要在模态框按钮事件前将委托事件解绑掉
+    $('.btn_update').off().on('click',function () {
+      // console.log("呵呵");
+      $.ajax({
+        type: "post",
+        url: "/user/updateUser",
+        data: {"id":id,"isDelete":isDelete},
+        success: function (data) {
+          // console.log(data);
+          if (data.success){
+            $('#updateModal').modal('hide');
+            render();
+          }
+        }
+      })
+    })
+  })
 });
