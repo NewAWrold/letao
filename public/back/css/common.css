@@ -105,3 +105,14 @@ ul{
 #pagintor{
   float: right;
 }
+.include{
+  position: relative;
+}
+#fileupload{
+  width: 80px;
+  height:100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
