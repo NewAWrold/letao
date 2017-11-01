@@ -1,0 +1,58 @@
+/*搜索框*/
+.lt_search{
+  width:100%;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+.lt_search>input{
+  height: 34px;
+  border-radius: 5px;
+  border:1px solid #069;
+  font-size: 12px;
+
+}
+.lt_search>button{
+  background-color: #069;
+  border-radius:0 5px 5px 0;
+  height: 34px;
+  position: absolute;
+  top: 10px;
+  right:10px;
+}
+
+/*title*/
+.search_title{
+  margin-top: 20px;
+}
+.search_title span{
+  font-size: 12px;
+  color: #666;
+  line-height: 35px;
+}
+.search_title span:first-child{
+  margin-left: 10px;
+}
+.search_title span:last-child{
+  margin-right: 10px;
+}
+
+/*//搜索记录*/
+.record{
+  border:1px dashed #ccc;
+  border-bottom: none;
+  margin:0 10px;
+}
+.record li{
+  border-bottom: 1px dashed #ccc;
+  height: 30px;
+  padding:0 5px;
+}
+.record li a{
+  font-size: 12px;
+  line-height: 30px;
+}
+.record li span{
+  line-height: 30px;
+}

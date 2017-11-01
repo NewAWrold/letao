@@ -1,0 +1,89 @@
+html,body{
+  height:100%;
+  background-color: white;
+}
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+img{
+  display: block;
+}
+.lt_footer .now{
+  color: darkorange;
+}
+
+
+/*//公共样式*/
+
+.container{
+  width:100%;
+  height:100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+/*头部*/
+.lt_header{
+  height: 45px;
+  width: 100%;
+  max-width: 640px;
+  background-color: #069;
+  position: fixed;
+  top:0;
+  color: #fff;
+  z-index: 998;
+}
+.lt_header h4{
+  text-align: center;
+  line-height: 45px;
+  margin:0;
+  font-weight: normal;
+
+}
+.lt_header a{
+  color: #fff;
+  position: absolute;
+  top:0;
+  line-height: 45px;
+}
+.lt_header a:first-child{
+  left:15px;
+}
+.lt_header a:last-child{
+  right:15px;
+}
+
+/*内容*/
+.lt_content{
+  width:100%;
+  height:100%;
+  position: relative;
+}
+
+/*底部*/
+.lt_footer{
+  height: 55px;
+  width:100%;
+  max-width:640px;
+  margin: 0 auto;
+  background-color: #069;
+  position: fixed;
+  bottom:0;
+  padding: 10px 20px;
+  z-index: 998;
+}
+.lt_footer li{
+  float: left;
+  width:25%;
+  text-align: center;
+}
+.lt_footer a{
+  color: #fff;
+}
+.lt_footer p{
+  color:#fff;
+}
