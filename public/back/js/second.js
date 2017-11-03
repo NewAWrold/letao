@@ -46,7 +46,7 @@
         pageSize:100
       },
       success:function (data) {
-
+        console.log(data);
         $(".dropdown-menu").html( template("tpl2", data) );
 
       }

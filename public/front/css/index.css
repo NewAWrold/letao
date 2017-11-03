@@ -12,37 +12,3 @@
   position: relative;
 }
 
-.lt_product{
-  padding: 10px;
-}
-.lt_product li{
-  width: 48%;
-  border: 1px solid #ccc;
-  float: left;
-  text-align: center;
-  padding: 10px;
-  margin-top: 10px;
-
-}
-.lt_product img{
-  width: 100%;
-}
-.lt_product li:nth-child(odd){
-  margin-right: 4%;
-}
-.lt_product li span:first-of-type{
-  display: block;
-}
-.lt_product li span:nth-of-type(2){
-  color: red;
-  font-size: 12px;
-}
-.lt_product li span:nth-of-type(3){
-  font-size: 12px;
-  text-decoration: line-through;
-  color: #666;
-}
-.lt_product li  button{
-  display: block;
-  margin: 0 auto;
-}

@@ -1,0 +1,19 @@
+.lt_row{
+  height: 30px;
+  background-color: #eee;
+  margin: 10px;
+}
+.lt_row a{
+  width:25%;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  color: #666;
+  font-size: 12px;
+}
+
+
+.lt_content .lt_row .now{
+  color: darkgoldenrod;
+}

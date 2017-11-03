@@ -24,7 +24,7 @@ img{
   min-width: 320px;
   margin: 0 auto;
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 100px;
 }
 /*头部*/
 .lt_header{
@@ -69,7 +69,7 @@ img{
   height: 55px;
   width:100%;
   max-width:640px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   background-color: #069;
   position: fixed;
   bottom:0;
@@ -86,4 +86,66 @@ img{
 }
 .lt_footer p{
   color:#fff;
+}
+
+
+/*搜索页的框等相同css样式*/
+.lt_search{
+  width:100%;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+.lt_search>input{
+  height: 34px;
+  border-radius: 5px;
+  border:1px solid #069;
+  font-size: 12px;
+
+}
+.lt_search>button{
+  background-color: #069;
+  border-radius:0 5px 5px 0;
+  height: 34px;
+  position: absolute;
+  top: 10px;
+  right:10px;
+}
+
+
+/*公共的产品详情*/
+.lt_product{
+  padding: 10px;
+}
+.lt_product li{
+  width: 48%;
+  border: 1px solid #ccc;
+  float: left;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+
+}
+.lt_product img{
+  width: 100%;
+}
+.lt_product li:nth-child(odd){
+  margin-right: 4%;
+}
+.lt_product li span:first-of-type{
+  display: block;
+}
+.lt_product li span:nth-of-type(2){
+  color: red;
+  font-size: 12px;
+}
+.lt_product li span:nth-of-type(3){
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #666;
+}
+.lt_product li  button{
+  display: block;
+  margin: 0 auto;
 }
