@@ -22,13 +22,41 @@ $.ajax({
       interval:1000
     });
     //动态渲染缘故所以需要初始化数量框
-    mui('.pro_num').numbox()
+    mui('.mui-numbox').numbox();
   }
  });
 
 
-
-
+//点击尺码变高亮
+$('.mui-scroll').on('click','.pro_size>span',function () {
+  $(this).addClass('now').siblings().removeClass('now');
+});
+//点击加入购物车进行参数传递
+$('.btn_add_cart').on('click',function () {
+  var size =  $('.pro_size .now').html();
+  var num = $('.pro_num .mui-numbox-input').val();
+  // console.log(id);
+  if (!size){
+  mui.toast('please choice your size !');
+  return false;
+  }
+  $.ajax({
+    type: "post",
+    url: "/cart/addCart",
+    data:{
+      productId : id,
+      num : num,
+      size : size
+    },
+    success : function (data) {
+      // console.log(data);
+      tools.checkLogin(data);
+      if (data.success){
+      mui.toast('加入成功!');
+     }
+    }
+  })
+});
 
 
 

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>乐淘搜索中心</title>
+  <title>乐淘主页</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/comment.css">
-  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/cart.css">
 </head>
 <body>
 
@@ -17,21 +17,31 @@
   <!--头部-->
   <header class="lt_header">
     <a href="javascript:history.go(-1);"><span class="mui-icon mui-icon-arrowleft"></span></a>
-    <h4>搜索中心</h4>
+    <h4>购物车</h4>
+    <a href="search.html"><span class="fa fa-search"></span></a>
   </header>
-
 
 
   <!--内容  -->
   <section class="lt_content">
-    <div class="lt_search">
-      <input type="text" class="lt_text" placeholder="请输入搜索关键字">
-      <button class="mui-btn-blue lt_go">搜索</button>
-    </div>
-    <div class="lt_history">
-      <!--我在这里挖一个坑来填充搜索记录-->
-    </div>
+      <div class="mui-table-view-cell">
+        <div class="mui-slider-right mui-disabled">
+          <a class="mui-btn mui-btn-blue mui-icon mui-icon-compose"></a>
+          <a class="mui-btn mui-btn-red mui-icon mui-icon-trash"></a>
+        </div>
+        <div class="mui-slider-handle">
+          <div class="mui-table-cell">
+            <div class="mui-table-view-cell mui-media infoBox ">
+                <!--我在这里挖一个坑-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
   </section>
+
 
 
   <!--底部-->
@@ -39,7 +49,7 @@
     <ul class="mui-checkbox">
       <li>
         <a href="index.html">
-          <span class="fa fa-home "></span>
+          <span class="fa fa-home"></span>
           <p>首页</p>
         </a>
       </li>
@@ -50,9 +60,9 @@
         </a>
       </li>
       <li>
-        <a href="user/cart.html">
-          <span class="fa fa-shopping-cart"></span>
-          <p>购物车</p>
+        <a href="javascript:;">
+          <span class="fa fa-shopping-cart  now"></span>
+          <p class="now">购物车</p>
         </a>
       </li>
       <li>
@@ -64,33 +74,27 @@
     </ul>
   </footer>
 </div>
-
 <script type="text/html" id="tpl">
-  {{if arr.length === 0}}
-  <p>没有搜索记录</p>
-  {{/if}}
-
-  {{if arr.length > 0}}
-  <div class="search_title mui-clearfix">
-    <span class="mui-pull-left">搜索历史</span>
-    <span class="mui-pull-right fa fa-trash icon_empty">清空记录</span>
+  {{each data v i}}
+  <div>
+  <img class="mui-media-object mui-pull-left" src="{{v.pic[0].picAddr}}" width="60" height="60">
+    </div>
+    <div class="mui-media-body  cart_right">
+    <p class='proName mui-ellipsis-2'>{{v.proName}}</p>
+  <p class="price_info">
+    <span class="price">&yen;{{v.price}}</span>
+  <span class="oldPrice">&yen;{{v.oldPrice}}</span>
+  <span class="num">{{v.num}}双</span>
+  </p>
+  <p class="size"> 鞋码：{{v.size}}</p>
   </div>
-  <ul class="record">
-    {{each arr v i}}
-    <li class="mui-clearfix">
-      <a href="searchList.html?key={{v}}" class="mui-pull-left">{{v}}</a>
-      <!--存i的目的是为了方便删除-->
-      <span data-index="{{i}}" class="mui-pull-right fa fa-close"></span>
-    </li>
-    {{/each}}
-  </ul>
-
-  {{/if}}
+  <input type="checkbox" class="ck">
+  {{/each}}
 </script>
 </body>
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/mui/js/mui.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
-<script src="js/search.js"></script>
 <script src="js/comment.js"></script>
+<script src="js/cart.js"></script>
 </html>

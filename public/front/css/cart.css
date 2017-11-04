@@ -1,0 +1,50 @@
+.mui-table-cell{
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+
+}
+.mui-table-cell .mui-table-view-cell{
+  padding:0;
+}
+.lt_content div img{
+  float: left;
+}
+.cart_right{
+  overflow: hidden;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.cart_right p{
+  color: #000;
+}
+.cart_right .proName{
+  height: 42px;
+}
+.cart_right .price_info{
+  height: 30px;
+  line-height: 30px;
+}
+.cart_right .price{
+  color:red;
+  font-size: 14px;
+
+}
+.cart_right .oldPrice{
+  color:#aaa;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.cart_right .num{
+  font-size: 14px;
+  float: right;
+  color:#aaa;
+}
+.cart_right .size{
+  color: #aaa;
+}
+.mui-table-view-cell .ck{
+  position: absolute;
+  left: 5px;
+  bottom: 13px;
+}
